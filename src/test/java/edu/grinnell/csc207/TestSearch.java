@@ -39,8 +39,8 @@ public class TestSearch {
   } // bsCall
 
   /**
-   * Assert that a search for a particular value finds the value at that
-   * index.
+   * Assert that a search for a particular value finds the value at an
+   * expected index.
    *
    * @param expected
    *   The expected index.
@@ -54,6 +54,18 @@ public class TestSearch {
     assertEquals(expected, SearchUtils.binarySearch(values, val),
         () -> bsCall(values, val));
   } // assertBinarySearchFinds(int, int[], int)
+
+  /**
+   * Assert that a search for a particular value finds the value.
+   * @param values
+   *   The array we're searching.
+   * @param val
+   *   The value we're searching for.
+   */
+  void assertBinarySearchFinds(int[] values, int val) throws Exception {
+    assertEquals(val, values[SearchUtils.binarySearch(values, val)],
+        () -> String.format("values[%s]", bsCall(values, val)));
+  } // assertBinarySearchFinds(int[], int)
 
   /**
    * Assert that a search for a particular value fails (hopefully, because 
@@ -103,5 +115,15 @@ public class TestSearch {
     assertBinarySearchFails(new int[] { 7, 11 }, 10);
     assertBinarySearchFails(new int[] { 7, 11 }, 20);
   } // testBinarySearchTwo()
+
+  /**
+   * Searching with duplicates. (Credit to SD, MM, JV.)
+   */
+  @Test
+  void testBinarySearchDups() throws Exception {
+    assertBinarySearchFinds(new int[] { 1, 1, 1, 2, 2, 3 }, 1);
+    assertBinarySearchFinds(new int[] { 1, 1, 1, 2, 2, 3 }, 2);
+    assertBinarySearchFinds(new int[] { 1, 1, 1, 2, 2, 3 }, 3);
+  } // testBinarySearchDups()
 
 } // class TestSearch
