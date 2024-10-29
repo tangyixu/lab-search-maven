@@ -26,7 +26,7 @@ public class SearchUtils {
    * @throws Exception
    *   If there is no i s.t. values[i] == val
    * @pre
-   *   values is sorted in increasing order.  That is, values[i] <
+   *   values is sorted in increasing order.  That is, values[i] <=
    *   values[i+1] for all reasonable i.
    * @post
    *   values[index] == val
@@ -47,7 +47,7 @@ public class SearchUtils {
    * @throws Exception
    *   If there is no i s.t. values[i] == val
    * @pre
-   *   values is sorted in increasing order.  That is, values[i] <
+   *   values is sorted in increasing order.  That is, values[i] <=
    *   values[i+1] for all reasonable i.
    * @post
    *   values[index] == val
@@ -73,7 +73,7 @@ public class SearchUtils {
    * @throws Exception
    *   If there is no i between lb and ub s.t. values[i] == val
    * @pre
-   *   values is sorted in increasing order.  That is, values[i] <
+   *   values is sorted in increasing order.  That is, values[i] <=
    *   values[i+1] for all reasonable i.
    * @post
    *   values[index] == val
@@ -119,15 +119,15 @@ public class SearchUtils {
    * @throws Exception
    *   If there is no i s.t. values[i] == val
    * @pre
-   *   values is sorted in increasing order.  That is, values[i] <
+   *   values is sorted in increasing order.  That is, values[i] <=
    *   values[i+1] for all reasonable i.
    * @post
    *   values[index] == val
    */
   public static int binarySearch(int[] vals, int val) throws Exception {
     return 0;
-    // return interativeBinarySearch(vals, i);
-    // return recursiveBinarySearch(vals, i);
+    // return interativeBinarySearch(vals, val);
+    // return recursiveBinarySearch(vals, val);
   } // binarySearch
 
 } // class SearchUtils
