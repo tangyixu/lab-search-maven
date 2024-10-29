@@ -23,7 +23,7 @@ public class SearchExperiments {
    * @param args
    *   Command-line arguments. Ignored.
    */
-  public static void main(String[] args) {
+  public static void main(String[] args) throwxs Exception {
     PrintWriter pen = new PrintWriter(System.out, true);
 
     String[] tmp =
