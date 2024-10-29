@@ -31,7 +31,7 @@ public class SearchUtils {
    * @post
    *   values[index] == val
    */
-  static int iterativeBinarySearch(int[] vals, int i) throws Exception {
+  static int iterativeBinarySearch(int[] vals, int val) throws Exception {
     return 0;   // STUB
   } // iterativeBinarySearch
 
@@ -52,7 +52,7 @@ public class SearchUtils {
    * @post
    *   values[index] == val
    */
-  static int recursiveBinarySearch(int[] vals, int i) throws Exception {
+  static int recursiveBinarySearch(int[] vals, int val) throws Exception {
     return 0;   // STUB
   } // recursiveBinarySearch
 
@@ -78,7 +78,7 @@ public class SearchUtils {
    * @post
    *   values[index] == val
    */
-  static int rbsHelper(int[] vals, int lb, int ub, int i) throws Exception {
+  static int rbsHelper(int[] vals, int lb, int ub, int val) throws Exception {
     return 0;   // STUB
   } // rbsHelper
 
@@ -124,7 +124,7 @@ public class SearchUtils {
    * @post
    *   values[index] == val
    */
-  public static int binarySearch(int[] vals, int i) throws Exception {
+  public static int binarySearch(int[] vals, int val) throws Exception {
     return 0;
     // return interativeBinarySearch(vals, i);
     // return recursiveBinarySearch(vals, i);
