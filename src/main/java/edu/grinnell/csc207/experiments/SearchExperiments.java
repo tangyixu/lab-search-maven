@@ -12,8 +12,7 @@ import edu.grinnell.csc207.util.SearchUtils;
 /**
  * Assorted experiments for searching structures.
  *
- * @author Your Name Here
- * @author Your Name Here
+ * @author Tiffany Tang
  * @author Samuel A. Rebelsky (starter code)
  */
 public class SearchExperiments {
@@ -34,6 +33,23 @@ public class SearchExperiments {
                        "romeo", "sierra", "tango", "uniform",
                        "victor", "whiskey", "xray", "yankee", "zulu" };
     ArrayList<String> strings = new ArrayList<String>(Arrays.asList(tmp));
+    // try {
+    //   Predicate<String> lessThanFiveChars = str -> str.length() < 5;
+    //   String ex1c = SearchUtils.search(strings, lessThanFiveChars);
+    //   pen.println("The first string of fewer than five letters is " + ex1c);
+    // } catch (Exception e) {
+    //   pen.println("There are no strings of fewer than five letters.");
+    // } // try/catch
+
+    try {
+      char ch = 'u';
+      CharSequence charS = new String(new char[] { ch });
+      Predicate<String> lessThanFiveChars = str -> str.contains(charS);
+      String ex1c = SearchUtils.search(strings, lessThanFiveChars);
+      pen.println("The first string contains 'u' is " + ex1c);
+    } catch (Exception e) {
+      pen.println("There are no strings containing 'u'.");
+    } // try/catch
 
     pen.close();
   } // main(String[])
