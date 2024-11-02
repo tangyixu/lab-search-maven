@@ -52,7 +52,23 @@ public class SearchUtils {
    *   values[index] == val
    */
   static int recursiveBinarySearch(int[] vals, int val) throws Exception {
-    return 0;   // STUB
+    for (int n = 0; n<vals.length; n++;)
+      {
+        int lb = n;
+        int ub = vals.length;
+        if(vals[(lb + ub)/2]>val)
+        {
+          ub = (lb + ub)/2;
+          return recursiveBinarySearch(Arrays.copyOf(vals, lb, ub);
+        }
+        else if (vals[(lb + ub)/2]<val)
+        {
+          lb = (lb + ub)/2;
+          return recursiveBinarySearch(Arrays.copyOf(vals, lb, ub);
+        }
+        else
+          return (lb + ub)/2;
+      }
   } // recursiveBinarySearch
 
   /**
